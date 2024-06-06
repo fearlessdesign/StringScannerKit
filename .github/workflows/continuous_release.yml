@@ -19,9 +19,9 @@ permissions:
 
 jobs:
   tests:
-    uses: ./.github/workflows/tests.yml
+    uses: ./.github/workflows/test.yml
   release:
-    needs: [tests]
+    needs: [test]
     runs-on: ubuntu-latest
     steps:
       - name: Bump version and push tag
