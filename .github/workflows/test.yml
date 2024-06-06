@@ -1,0 +1,14 @@
+name: tests
+on: [workflow_call]
+
+jobs:
+  test:
+    runs-on: macos-latest
+    steps:
+      - name: Get swift version
+        run: swift --version
+      - uses: actions/checkout@v2
+      - name: Build
+        run: swift build
+      - name: Run tests
+        run: swift test
