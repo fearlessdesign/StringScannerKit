@@ -18,7 +18,7 @@ permissions:
   statuses: none
 
 jobs:
-  tests:
+  test:
     uses: ./.github/workflows/test.yml
   release:
     needs: [test]
